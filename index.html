@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Player Details CRUD form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container" id="formContainer">
+  <div id="main">
+    <form id="playerForm">
+        <div class="group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        </div>
+        <p id="p1"></p>
+        <div class="group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+    </div>
+        <p id="p2"></p>
+        <div class="group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="" selected disabled>Select a gender</option>
+            <option value="General">General</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    </div>
+        <p id="p3"></p>
+        <div class="group">
+        <label for="gameType">Game Type:</label>
+        <select id="gameType" name="gameType" required onchange="showSportsOptions()">
+            <option value="" selected disabled>Select a game type</option>
+            <option value="Indoor">Indoor</option>
+            <option value="Outdoor">Outdoor</option>
+        </select>
+    </div>
+        <p id="p4"></p>
+        <div class="group">
+        <label for="sports">Sports:</label>
+        <select id="sports" name="sports" required disabled>
+            <option value="">Select Sport</option>
+        </select>
+    </div>
+        <p id="p5"></p>
+        <div class="group">
+        <label for="image">Profile:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+    </div>
+        <p id="p6"></p>
+        <button type="button" onclick="addOrUpdatePlayer()">Submit</button>
+    </form>
+
+</div>
+<div class="container" id="playerContainer">
+    <h2>Player Details</h2>
+    
+    <div id="players"></div>
+</div>
+</div>
+<div id="container-two">
+    <input type="text" id="search" placeholder="Search by Name">
+    <select id="filter">
+        <option value="">All</option>
+        <option value="Indoor">Indoor</option>
+        <option value="Outdoor">Outdoor</option>
+    </select>
+</div>
+<script src="script.js">
+
+</script>
+</body>
+</html>
